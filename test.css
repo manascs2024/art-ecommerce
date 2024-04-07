@@ -1,0 +1,568 @@
+/* Buttons*/
+
+.container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    --line_color: #555555;
+    --back_color: #ffecf6;
+  }
+  
+  .new-button {
+    position: relative;
+    z-index: 0;
+    width: 240px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .new-button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .new-button::before,
+  .new-button::after,
+  .new-button__text::before,
+  .new-button__text::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all 0.5s ease;
+  }
+  
+  .new-button::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  
+  .new-button::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+  }
+  
+  .new-button__text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  
+  .new-button__text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+  }
+  
+  .new-button__line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .new-button__line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+  }
+  
+  .new-button__line:nth-child(1),
+  .new-button__line:nth-child(1)::before {
+    left: 0;
+  }
+  
+  .new-button__line:nth-child(2),
+  .new-button__line:nth-child(2)::before {
+    right: 0;
+  }
+  
+  .new-button:hover {
+    letter-spacing: 6px;
+  }
+  
+  .new-button:hover::before,
+  .new-button:hover .new-button__text::before {
+    width: 8px;
+  }
+  
+  .new-button:hover::after,
+  .new-button:hover .new-button__text::after {
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  
+  .new-button__drow1,
+  .new-button__drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+  }
+  
+  .new-button__drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+  }
+  
+  .new-button__drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+  }
+  
+  .new-button__drow1::before,
+  .new-button__drow1::after,
+  .new-button__drow2::before,
+  .new-button__drow2::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .new-button__drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+  }
+  
+  .new-button__drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+  }
+  
+  .new-button__drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+  }
+  
+  .new-button__drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+  }
+  
+  .new-button__drow1,
+  .new-button__drow1::before,
+  .new-button__drow1::after,
+  .new-button__drow2,
+  .new-button__drow2::before,
+  .new-button__drow2::after {
+    background: var(--back_color);
+  }
+  
+  .new-button:hover .new-button__drow1 {
+    animation: drow1 ease-in 0.06s;
+    animation-fill-mode: forwards;
+  }
+  
+  .new-button:hover .new-button__drow1::before {
+    animation: drow2 linear 0.08s 0.06s;
+    animation-fill-mode: forwards;
+  }
+  
+  .new-button:hover .new-button__drow1::after {
+    animation: drow3 linear 0.03s 0.14s;
+    animation-fill-mode: forwards;
+  }
+  
+  .new-button:hover .new-button__drow2 {
+    animation: drow4 linear 0.06s 0.2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .new-button:hover .new-button__drow2::before {
+    animation: drow3 linear 0.03s 0.26s;
+    animation-fill-mode: forwards;
+  }
+  
+  .new-button:hover .new-button__drow2::after {
+    animation: drow5 linear 0.06s 0.32s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes drow1 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100px;
+    }
+  }
+  
+  @keyframes drow2 {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+    }
+  }
+  
+  @keyframes drow3 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80px;
+    }
+  }
+  
+  @keyframes drow4 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 120px;
+    }
+  }
+  
+  @keyframes drow5 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 124px;
+    }
+  }
+  
+
+/* End button */
+
+
+
+.another-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.another-container {
+    /* color type A */
+    --line_color: #ABABAB;
+    --back_color: #ffecf6;
+}
+
+.new-button-style {
+    position: relative;
+    z-index: 0;
+    width: 240px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.new-button-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.new-button-style::before,
+.new-button-style::after,
+.new-button-text::before,
+.new-button-text::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all 0.5s ease;
+}
+
+.new-button-style::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.new-button-style::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+}
+
+.new-button-text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.new-button-text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+}
+
+.new-button-line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.new-button-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+}
+
+.new-button-line:nth-child(1),
+.new-button-line:nth-child(1)::before {
+    left: 0;
+}
+
+.new-button-line:nth-child(2),
+.new-button-line:nth-child(2)::before {
+    right: 0;
+}
+
+.new-button-style:hover {
+    letter-spacing: 6px;
+}
+
+.new-button-style:hover::before,
+.new-button-style:hover .new-button-text::before {
+    width: 8px;
+}
+
+.new-button-style:hover::after,
+.new-button-style:hover .new-button-text::after {
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.new-button-drow1,
+.new-button-drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+}
+
+.new-button-drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+}
+
+.new-button-drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+}
+
+.new-button-drow1::before,
+.new-button-drow1::after,
+.new-button-drow2::before,
+.new-button-drow2::after {
+    content: '';
+    position: absolute;
+}
+
+.new-button-drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+}
+
+.new-button-drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+}
+
+.new-button-drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+}
+
+.new-button-drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+}
+
+.new-button-drow1,
+.new-button-drow1::before,
+.new-button-drow1::after,
+.new-button-drow2,
+.new-button-drow2::before,
+.new-button-drow2::after {
+    background: var(--back_color);
+}
+
+.new-button-style:hover .new-button-drow1 {
+    animation: drow1 ease-in 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.new-button-style:hover .new-button-drow1::before {
+    animation: drow2 linear 0.08s 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.new-button-style:hover .new-button-drow1::after {
+    animation: drow3 linear 0.03s 0.14s;
+    animation-fill-mode: forwards;
+}
+
+.new-button-style:hover .new-button-drow2 {
+    animation: drow4 linear 0.06s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.new-button-style:hover .new-button-drow2::before {
+    animation: drow3 linear 0.03s 0.26s;
+    animation-fill-mode: forwards;
+}
+
+.new-button-style:hover .new-button-drow2::after {
+    animation: drow5 linear 0.06s 0.32s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drow1 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes drow2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    11% {
+        opacity: 1;
+    }
+    100% {
+        width: 120px;
+    }
+}
+
+@keyframes drow3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes drow4 {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes drow5 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 124px;
+    }
+}
+
+
+
+
+
+
+

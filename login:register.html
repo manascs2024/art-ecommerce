@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="page-header">
+        <nav class="nav-trans">
+          <div class="left-nav">
+            <a href="#">
+                <img src="images/logo.png" alt="logo" class="logo-top">
+            </a>
+          </div>
+          <div class="nav-menu">
+            <ul class="main-menu">
+              <li>
+                <a href="home.html"><span>Home</span></a>
+                <ul class="submenu">
+                  <li><a href="product-gallery.html"><span>Interior-Decor</span></a></li>
+                  <li><a href="product-gallery.html"><span>Masonry Shop</span></a></li>
+                  <li><a href="product-gallery.html"><span>Product Gallery</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href=""><span>About</span></a>
+                <ul class="submenu">
+                  <li><a href="about-us.html"><span>About Us</span></a></li>
+                  <li><a href="product-gallery.html"><span>Meet The Team</span></a></li>
+                  <li><a href="about-us.html"><span>Our Awards</span></a></li>
+                  <li><a href="contact-us.html"><span>Contact Us</span></a></li>
+                </ul>
+              </li>
+
+              
+            </ul>
+          </div>
+        </nav>
+      </header>  
+
+      <main>
+        <div class="login-register-container">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="EMAIL" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" class="toggle-form">Register here</a></p>
+                </form>
+            </div>
+
+            <div class="register-container">
+                <h2>Register</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="NAME" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder="EMAIL" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+                    </div>
+                    <button type="submit">Register</button>
+                    <p>Already have an account? <a href="#" class="toggle-form">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="page-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="logo" class="logo-bottom">
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <ul>
+              <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+              <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
+              <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Tunda. All Rights Reserved.</p>
+        </div>
+      </footer>
+      
+      <script src="login.js"></script>
+    </body>
+    </html>
