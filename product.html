@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>About Us</title>
+    <title>Product</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="test.css">
 </head>
@@ -56,55 +56,54 @@
         </nav>
       </header>  
       <main>
-        <div class="info-sec">
-            <div class="info">
-                <h2>We are Supreme</h2>
-                <p>We are the best you will ever see.</p>
+        <div class="product-container">
+            <div class="product-pics">
+                <img src="images/product1.jpg" alt="Picture 1" onclick="displayImage('images/product1.jpg')">
+                <img src="images/product1.1.jpeg" alt="Picture 2" onclick="displayImage('images/product1.1.jpeg')">
+                <img src="images/product1.2.png" alt="Picture 3" onclick="displayImage('images/product1.2.png')">
+                <img src="images/product1.3.jpeg" alt="Picture 3" onclick="displayImage('images/product1.3.jpeg')">
             </div>
-            <div class="info-img">
-                <img src="images/info.avif" alt="">
+            <div class="product-picture">
+                <img id="mainImage" src="images/product1.jpg" alt="Main Picture">
+            </div>
+            <div class="product-info">
+                <h2>Black Plate</h2>
+                <p class="price">Price: $10.99</p>
+                <div class="additional-info">
+                    <p>Elevate your space with this modern, minimalist black plate, perfect for adding a touch of sophistication to any room."</p>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
             </div>
         </div>
-        <div class="awards-main">
-            <h2>Awards</h2>
-            <p>___</p>
-        <div class="awards">
-            <div class="single-award award1"></div>
-            <div class="single-award award2"></div>
-            <div class="single-award award3"></div>
-            <div class="single-award award4"></div>
-            <div class="single-award award5"></div>
-            <div class="single-award award6"></div>
-          </div>
-          </div>
-
-          <div class="paa">
-          <div class="paa-section">
-            <h2>People Also Ask</h2>
-            <ul>
-                <li>
-                    <div class="question" onclick="toggleAnswer(this)">Are We Good?</div>
-                    <div class="answer">We Are The Best That You Will Ever Buy From.</div>
-                </li>
-                <li>
-                    <div class="question" onclick="toggleAnswer(this)">What Do We Sell?</div>
-                    <div class="answer">Everything That Will Make Your House Look Better.</div>
-                </li>
-                <li>
-                    <div class="question" onclick="toggleAnswer(this)">Can I Return My Order?</div>
-                    <div class="answer">Although You Will Never Need To But Still, Yes You Can.</div>
-                </li>
-                <li>
-                    <div class="question" onclick="toggleAnswer(this)">If I Have Any Problems?</div>
-                    <div class="answer">Our Support Team Is Always Just A Call Away.</div>
-                </li>
-            </ul>
-        </div>
-        <div class="paa-image">
-            <img src="images/vase.webp" alt="">
-        </div>
-        </div>
+        <div class="product-description-tabs">
+            <button class="tab-btn active" onclick="openTab('tab1')">Description</button>
+            <button class="tab-btn" onclick="openTab('tab2')">Additional Information</button>
+            <button class="tab-btn" onclick="openTab('tab3')">Description 3</button>
         
+            <div id="tab1" class="tab-content active">
+                <p>Crafted from high-quality ceramic, this contemporary white vase boasts a sleek finish, making it a versatile addition to any décor scheme, whether filled with vibrant blooms or displayed on its own.</p>
+            </div>
+            <div id="tab2" class="tab-content">
+                <p>Sleek ceramic design, glossy white, 10" tall, 5" diameter</p>
+            </div>
+            <div id="tab3" class="tab-content">
+              <div class="main-container">
+                <div class="main-header">
+                    <h1>Customer Reviews</h1>
+                </div>
+                <div class="reviews-container">
+                    <div class="review">
+                        <h3 class="review-name">John Doe</h3>
+                        <p class="review-text">"Absolutely stunning! The vase looks even better in person. It's the perfect addition to my living room."</p>
+                    </div>
+                    <div class="review">
+                        <h3 class="review-name">Jane Smith</h3>
+                        <p class="review-text">"Love the sleek design of this vase. It's great quality and fits beautifully with my home decor."</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
       </main>
       <footer class="page-footer">
         <div class="footer-content">

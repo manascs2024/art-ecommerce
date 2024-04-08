@@ -61,3 +61,24 @@ function toggleAnswer(question) {
   question.classList.toggle("expanded");
 }
 
+function displayImage(imageSrc) {
+  var mainImage = document.getElementById('mainImage');
+  mainImage.src = imageSrc;
+}
+
+function openTab(tabId) {
+  var tabs = document.querySelectorAll('.tab-content');
+  var tabButtons = document.querySelectorAll('.tab-btn');
+
+  tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+  });
+
+  tabButtons.forEach(function(btn) {
+      btn.classList.remove('active');
+  });
+
+  document.getElementById(tabId).classList.add('active');
+  document.querySelector('button[data-tab="' + tabId + '"]').classList.add('active');
+}
+
