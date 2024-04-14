@@ -82,3 +82,11 @@ function openTab(tabId) {
   document.querySelector('button[data-tab="' + tabId + '"]').classList.add('active');
 }
 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "nav-trans") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav-trans";
+  }
+}
